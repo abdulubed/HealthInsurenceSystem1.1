@@ -1,0 +1,65 @@
+#server port number
+server:
+  port: 9999
+
+#oracle config properties
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: manager
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    
+ #hibernate properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        show_sql: true
+        format_sql: true
+        
+    
+#view resolver # application.yml
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:  noorshaikabdulubed@gmail.com
+    password:  Abdul@1994
+    properties:
+      mail:
+        smtp:
+         starttls:
+           enable: true
+           required: true
+         auth: true  
+         connectiontimeout: 10000
+         timeout: 10000
+         writetimeout: 10000
+     
+ 
+
+#messages
+his: 
+  enrollSuccess: Enrollment successfull
+  enrollFailure: Enrollment Failure  
+  userRegistration: userRegistration    
+  message: message
+  updateSuccess: Updatation successful
+  editForm: editForm
+  loginForm: loginForm
+  loginMessage: loginMessage
+  loginSuccess: Login Successful
+  invalidMessage: invalidMessage
+  invalidCredentials: User name (or) Password incorrect
+  userInactive: User is inActive state. Please contact admin
+  caseWorkerDashboard: Welcome to caseworker dashboard
+  adminDashboard: Welcome to admin dashboard
+  arRegistration: arRegistration
+  
+          

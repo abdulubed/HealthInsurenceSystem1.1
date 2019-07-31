@@ -1,0 +1,2 @@
+Hi <font color="green"> ${FNAME} ${LNAME} </font>, <br/> 
+Account status changed to  : <font color="green"> ${STATUS} </font>  Status
